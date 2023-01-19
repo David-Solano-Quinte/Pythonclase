@@ -1,0 +1,52 @@
+## David Josue Solano Quinte
+
+opcion = int(1)
+while opcion != 4:
+    opcion = int(input("""Escriba la opción a realizar:
+1) Dibujar un cuadrado con *´s.
+2) Mostrar una lista de numeros indicando los multiplos de 2.
+3) Iterar una lista de nombres y edades imprimiendo los que son mayores de edad.
+4) Terminar el programa.
+"""))
+    if opcion!=4:
+        if opcion==3 :
+            a=0
+            nombre= []
+            edad= []
+            dato = ""
+            while dato != "0":
+                dato= input("""Ingrese el nombre:   (para finalizar la recopilación de datos escriba "0")
+""")
+                if type(dato) != list and dato!="0":
+                    nombre.append(dato)
+                    ed = input(f"""Ingrese la edad de {dato}:
+""")
+                    edad.append(ed)
+                elif type(dato)==list :
+                    nombre.append(dato[0])
+                    edad.append(dato[1])
+                
+                if dato!="0":
+                    print (nombre[a])
+                    print (edad[a])
+                    a+=1
+        elif opcion==2 :
+            a= int(input ("""Ingrese el rango:
+"""))
+            b =int(input())
+            print(" ")
+            for x in range(a,b+1,1):
+                if x%2==0:
+                    print(f"{x} es multiplo de 2.")
+                else:
+                    print(f"{x} no es multiplo de 2.")
+            print(" ")
+        elif opcion==1 :
+            for a in range(1,9,1) :
+                if a==1 or a==8:
+                    print("* "*10)
+                else :
+                    print("*"+" "*17+"*")
+
+        else:
+            print ("Esa opcion no es valida.")
