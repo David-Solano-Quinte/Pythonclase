@@ -15,7 +15,7 @@ while True:
 1) Obtener una lista sobre las categorías de los libros.
 2) Obtener nombre de los libros y autores.
 3) Cambiar el estado de un libro.
-4)
+4) Ver la lista de usuarios de la biblioteca.
 0) Terminar programa.
 """)
     if opcion=="1":
@@ -111,7 +111,7 @@ while True:
                 a+=1
             print ("0) Volver al menu principal.")
             opcion= input(f"Ingrese la opcion de la que desea cambiar su disponibilidad: ")
-            if opcion.isnumeric() and int(opcion)<=a-1:
+            if opcion.isnumeric() and int(opcion)<a:
                 if opcion =="0":
                     break
                 state=biblioteca[f"libro{opcion}"][2]
@@ -123,6 +123,9 @@ while True:
             else:
                 print("ERROR. El dato ingresado no es válido, porfavor ingrese una opción válida.")
     elif opcion=="4":
-        print("a")
+        lista_usuarios=["Jorge", "Miguel", "María", "Pepe", "Henry", "Manuel", "Roxane"]
+        for nombre in lista_usuarios:
+            print (nombre)
     elif opcion!="5":
         print("ERROR. Esa opción no es válida, porfavor ingrese de nuevo una opción.")
+        
