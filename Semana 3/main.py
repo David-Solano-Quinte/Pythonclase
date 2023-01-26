@@ -1,5 +1,8 @@
 valor=(__name__ =="__main__")
-print (valor)
+
+def llamada ():
+    from __main__ import abc
+    print (abc())
 
 def suma (n:int):
     if n>0:
