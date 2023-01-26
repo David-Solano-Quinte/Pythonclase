@@ -19,8 +19,11 @@ def count(texto:str):
 
 ##FIND
 def find (char:str,texto:str):
-    print (f"Se encuentre en la posición: {texto.find(char)}")
-    
+    a=texto.find(char)
+    if a != -1:
+        print (f"Se encuentre en la posición: {texto.find(char)+1}")
+    else :
+        print("No se encontró este carácter.")
     
 ##UPPERCASE
 def uppercase (texto:str):
