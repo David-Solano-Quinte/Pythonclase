@@ -1,5 +1,6 @@
 from main import suma
 from main import div
+import os
 
 while True:
     opcion=input("""----------------------------------------------    
@@ -15,6 +16,10 @@ c) Salir del programa.
             print(f"La suma de los {n} primeros numeros es: {suma(n)}")
         except:
             print("ERROR. Los datos ingresados no son números.")
+        else:
+            print(os.getcwd())
+        finally:
+            print ("Proceso terminado.")
     elif opcion.lower()=="b":
         try:
             print("Ingrese los valores de la división:")
@@ -23,7 +28,11 @@ c) Salir del programa.
             print (f"El resultado de la división es: {div(a,b)}")
         except:
             print("ERROR. Los datos ingresados no son números.")
+        else:
+            print(os.getcwd())
+        finally:
+            print ("Proceso terminado.")
     elif opcion.lower()=="c":
         break
     else :
-        "ERROR. Esa opción no es válida, profavor ingrese una opcion válida."
+        print("ERROR. Esa opción no es válida, profavor ingrese una opcion válida.")

@@ -13,6 +13,7 @@ class PRODUCTO:
 ejemplo=PRODUCTO("Sample_text","perú","0001",2023)
 
 while True:
+    ##MENÚ
     opcion= input ("""--------------------------------------------
 Ingrese la opcion a realizar: 
 a) Mostrar el producto y código.
@@ -20,6 +21,7 @@ b) Mostrar país de orígen y número de lote.
 c) Salir.
 --------------------------------------------
 """)
+    ##OPCIONES
     if opcion.lower() == "a":
         print(PRODUCTO.__str__(ejemplo))
     elif opcion.lower() == "b":
